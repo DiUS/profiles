@@ -73,10 +73,15 @@ input {
         float: left;
         width: 200px;
         height: 200px;
+        margin-left: 20px;
+        margin-top: 20px;
         background: url('../images/charles_blaxland.jpg') no-repeat top left;
     }
 }
 
+.icon {
+  color: white;
+}
 .name-and-title {
     padding: 20px 0;
 }
@@ -85,6 +90,22 @@ input {
     height: 70px;
     margin-left: 0;
     background-color: #0094cf;
+
+  .links {
+    padding-top: 5px;
+    padding-left: 15px;
+  }
+
+  i {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  a {
+    padding-left: 6px;
+    color: white;
+  }
 }
 
 hr {
