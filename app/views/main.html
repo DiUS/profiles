@@ -55,10 +55,9 @@
     <div class="core-experience">
       <div class="highlight">
         <h4>Core experience</h4>
-        <ul class="unstyled">
-          <li>Java, Ruby, C++</li>
-          <li>Big Data, Mathematics, AWS, Agile and Lean, TDD, BDD</li>
-        </ul>
+        <div>
+          <span ng-repeat="label in attrs.labels" class="label label-info">{{label}}</span>
+        </div>
       </div>
     </div>
     <div class="education">

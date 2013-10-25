@@ -5,6 +5,7 @@ angular.module('profilesApp')
     $scope.attrs = {};
     $scope.attrs.title = 'Senior Consultant, Cloud Lead';
     $scope.attrs.name = 'Charles Blaxland';
+    $scope.attrs.labels = ['Java', 'Ruby', 'C++', 'Big Data', 'Mathematics', 'AWS', 'Agile and Lean', 'TDD', 'BDD'];
 
     $scope.enabledEditTitle = function () {
       $scope.attrs.editingTitle = true;

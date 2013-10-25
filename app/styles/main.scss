@@ -104,7 +104,15 @@ hr {
 }
 
 .highlight {
-    background: #ccc;
+    background: #eee;
     padding: 10px;
     margin: 10px 0;
+}
+
+.label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 4px;
+    font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
