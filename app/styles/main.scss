@@ -46,10 +46,6 @@ b {
   font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-<<<<<<< HEAD
-h3 {
- font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-=======
 h4 {
  font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;     
  color: #007FC0;
@@ -57,7 +53,6 @@ h4 {
 
 input {
   font-family: "Museo500-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
->>>>>>> editing fields, border around profile
 }
 
 .header {
@@ -106,4 +101,8 @@ hr {
 .editwrapper {
     margin: 0;
     padding: 0;
+}
+
+.highlight {
+    background: grey;
 }
