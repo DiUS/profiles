@@ -7,14 +7,9 @@
 </div>
 <div class="row">
   <div class="span6 name-and-title">
-    <div class="editwrapper" ng-switch="attrs.editingName">
-      <span  ng-switch-when="false" ng-click="enabledEditName()"><b>{{attrs.name}}</b></span>
-      <input ng-switch-when="true"  ng-blur="disableEditName()" ng-model="attrs.name" type="text" class="editfield" />
-    </div>
-    <div class="editwrapper" ng-switch="attrs.editingTitle">
-      <span  ng-switch-when="false" ng-click="enabledEditTitle()">{{attrs.title}}</span>
-      <input ng-switch-when="true"  ng-blur="disableEditTitle()" ng-model="attrs.title" type="text" class="editfield" />
-    </div>
+    <b edit-in-place="attrs.name"></b>
+    <br/>
+    <span edit-in-place="attrs.title"></span>
   </div>
   <div class="span6">tags</div>
 </div>
@@ -42,7 +37,9 @@
     <div>
       <h4>Career Highlights</h4>
       <ul class="unstyled">
-        <li class="spaced" ng-repeat="highlight in attrs.highlights">{{highlight}}</li>
+        <li class="spaced" ng-repeat="highlight in attrs.highlights">
+          <span edit-in-place-textarea="highlight.text"></span>
+        </li>
         <li>
           <span ng-switch="attrs.addingExperience">
             <a ng-switch-when="false" ng-click="addExperience()">Add Highlight</a>
