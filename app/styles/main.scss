@@ -1,6 +1,23 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
+$baseFontSize: 16px;
+
+@font-face {
+    font-family: Museo300-Regular;
+    src: url("Museo300-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Museo500-Regular;
+    src: url("Museo500-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Museo700-Regular;
+    src: url("Museo700-Regular.otf") format("opentype");
+}
+
 @import "bootstrap-sass/lib/bootstrap";
 
 /* Put your CSS here */
@@ -10,8 +27,16 @@ html, body {
 
 body {
     background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Museo500-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+}
+
+b {
+  font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;  
+}
+
+h3 {
+ font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;     
 }
 
 .header {
