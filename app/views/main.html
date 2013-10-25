@@ -29,9 +29,9 @@
     <div>
       <h4>Selected Experience</h4>
       <ul class="unstyled">
-        <li>Sensis</li>
-        <li>Real Estate Australia</li>
-        <li>Westfield</li>
+        <li class="spaced" ng-repeat="experience in attrs.experiences">
+          <span edit-in-place="experience.text"></span>
+        </li>
       </ul>
     </div>
     <div>
