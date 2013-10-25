@@ -1,3 +1,4 @@
+<div class="container">
 <div class="row">
   <div class="span12 header">
     <div class="photo"></div>
@@ -6,9 +7,14 @@
 </div>
 <div class="row">
   <div class="span6 name-and-title">
-    <b>Charles Blaxland</b>
-    <br/>
-    Senior Consultnat, Cloud Lead
+    <div class="editwrapper" ng-switch="attrs.editingName">
+      <span  ng-switch-when="false" ng-click="enabledEditName()"><b>{{attrs.name}}</b></span>
+      <input ng-switch-when="true"  ng-blur="disableEditName()" ng-model="attrs.name" type="text" class="editfield" />
+    </div>
+    <div class="editwrapper" ng-switch="attrs.editingTitle">
+      <span  ng-switch-when="false" ng-click="enabledEditTitle()">{{attrs.title}}</span>
+      <input ng-switch-when="true"  ng-blur="disableEditTitle()" ng-model="attrs.title" type="text" class="editfield" />
+    </div>
   </div>
   <div class="span6">tags</div>
 </div>
@@ -25,13 +31,13 @@
 <hr>
 <div class="row">
   <div class="span7">
-    <h3>Selected Experience</h3>
+    <h4>Selected Experience</h4>
     <ul class="unstyled">
       <li>Sensis</li>
       <li>Real Estate Australia</li>
       <li>Westfield</li>
     </ul>
-    <h3>Career Highlights</h3>
+    <h4>Career Highlights</h4>
     <ul class="unstyled">
       <li>
         Led the ResMed Easycare Online system architecture and provided technical development leadership for the highly successful product. Also accountable for the work done across multiple teams consisting of a total of more than 60 people which consisted of DiUS, ResMed and other third party vendors.
@@ -43,14 +49,14 @@
   </div>
   <div class="span5">
     <div class="core-experience">
-      <h3>Core experience</h3>
+      <h4>Core experience</h4>
       <ul class="unstyled">
         <li>Java, Ruby, C++</li>
         <li>Big Data, Mathematics, AWS, Agile and Lean, TDD, BDD</li>
       </ul>
     </div>
     <div class="education">
-      <h3>Education and training</h3>
+      <h4>Education and training</h4>
       <div class="row">
         <div class="span2">
           1994-1997
@@ -61,18 +67,19 @@
       </div>
     </div>
     <div class="passionate">
-      <h3>Passionate about</h3>
+      <h4>Passionate about</h4>
       <p>
-￼￼￼￼￼￼￼￼Dan North's work on Behavioural Driven Development, AWS Elastic Beanstalk, Ansible and Continuous Deployment.
+        Dan North's work on Behavioural Driven Development, AWS Elastic Beanstalk, Ansible and Continuous Deployment.
       </p>
       <p>
-Big Data. Charles is the leader of DiUS Big Data Special Interest Group, looking at
-how NoSQL, data analytics and machine learning can help improve insights and solve business
-problems.
+        Big Data. Charles is the leader of DiUS Big Data Special Interest Group, looking at
+        how NoSQL, data analytics and machine learning can help improve insights and solve business
+        problems.
       </p>
     </div>
   </div>
 </div>
 <div class="row footer">
   <div class="span12">footer</div>
+</div>
 </div>

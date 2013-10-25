@@ -29,14 +29,35 @@ body {
     background: #fafafa;
     font-family: "Museo500-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    margin-top: 0;
+}
+
+.container {
+    background: white;
+}
+
+.outer-container {
+    width: 980px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 b {
   font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 h3 {
  font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+=======
+h4 {
+ font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;     
+ color: #007FC0;
+}
+
+input {
+  font-family: "Museo500-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+>>>>>>> editing fields, border around profile
 }
 
 .header {
@@ -62,11 +83,27 @@ h3 {
 }
 
 .name-and-title {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .footer {
     height: 70px;
     margin-left: 0;
     background-color: #0094cf;
+}
+
+hr {
+    margin-top: 0px;
+}
+
+.editfield {
+    border: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    width: 300px;
+}
+
+.editwrapper {
+    margin: 0;
+    padding: 0;
 }
