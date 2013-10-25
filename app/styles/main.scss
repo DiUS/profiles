@@ -14,19 +14,17 @@ body {
     color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-}
+.header {
+    position: relative;
+    height: 135px;
+    background: url('../images/header.png') no-repeat top left;
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+    .dius {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        width: 135px;
+        height: 68px;
+        background: url('../images/dius.png') no-repeat top left;       
+    }
 }
