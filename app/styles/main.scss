@@ -159,3 +159,20 @@ li.spaced {
 .edit-in-place textarea {
     height: 100px;
 }
+
+.skill-inline {
+  color: white;
+  font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: transparent;
+  border: 0;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  height: 19px;
+  padding-bottom: 0;
+  width: 80px;
+  resize: none;
+  margin-top: -4px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+}

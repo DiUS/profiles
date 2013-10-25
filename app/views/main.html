@@ -54,13 +54,19 @@
       <div class="highlight">
         <h4>Skills</h4>
         <div>
-          <span ng-repeat="label in attrs.labels" class="label label-info">{{label}}</span>
+          <span ng-repeat="label in attrs.labels" class="label label-info"><span edit-in-place="label.skill"></span></span>
+          <span ng-switch="attrs.addingSkill">
+            <a ng-switch-when="false" ng-click="addSkill()">Add</a>
+            <span ng-switch-when="true" class="label">
+              <textarea class="skill-inline" ng-model="newSkill" ng-enter="addNewSkill(newSkill)"></textarea>
+            </span>
+          </span>
         </div>
       </div>
     </div>
     <div class="education">
       <div class="highlight">
-        <h4>Education and training</h4>
+        <h4 edit-in-place="attrs.education">Education and training</h4>
         <div class="row">
           <div class="span2">
             1994-1997
