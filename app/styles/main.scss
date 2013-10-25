@@ -32,25 +32,32 @@ body {
 }
 
 b {
-  font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;  
+  font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h3 {
- font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;     
+ font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .header {
     position: relative;
-    height: 135px;
+    height: 220px;
     background: url('../images/header.png') no-repeat top left;
 
     .dius {
         position: absolute;
-        right: 20px;
+        right: 80px;
         top: 40px;
         width: 135px;
         height: 68px;
-        background: url('../images/dius.png') no-repeat top left;       
+        background: url('../images/dius.png') no-repeat top left;
+    }
+
+    .photo {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background: url('../images/charles_blaxland.jpg') no-repeat top left;
     }
 }
 
