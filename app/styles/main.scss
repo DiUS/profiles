@@ -57,8 +57,8 @@ input {
 
 .header {
     position: relative;
-    height: 220px;
     background: url('../images/header.png') no-repeat top left;
+    height: 170px;
 
     .dius {
         position: absolute;
@@ -69,21 +69,33 @@ input {
         background: url('../images/dius.png') no-repeat top left;
     }
 
-    .photo {
-        float: left;
-        width: 200px;
-        height: 200px;
-        margin-left: 20px;
-        margin-top: 20px;
-        background: url('../images/charles_blaxland.jpg') no-repeat top left;
-    }
 }
 
 .icon {
-  color: white;
+  color: black;
 }
 .name-and-title {
     padding: 20px 0;
+}
+
+.contact {
+
+  i {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  a {
+    padding-left: 6px;
+    color: black;
+    font-family: "Museo500-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+
+
+}
+.section{
+    clear:both;
 }
 
 .footer {
@@ -96,24 +108,6 @@ input {
     font-size: 26px;
     font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
-  }
-
-  .links {
-    padding-top: 5px;
-    padding-left: 15px;
-
-    a {
-      padding-left: 6px;
-      color: white;
-      font-family: "Museo500-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 12px;
-    }
-  }
-
-  i {
-    font-size: 12px;
-    font-weight: bold;
-    margin-right: 10px;
   }
 
 }
@@ -176,3 +170,78 @@ li.spaced {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   font-weight: bold;
 }
+
+.well {
+  background-color: #ffffff !important;
+  border: 1px solid #ddd !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  -webkit-border-radius: 0px !important;
+     -moz-border-radius: 0px !important;
+          border-radius: 0px !important;
+  -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.hero-unit {
+  padding: 30px !important;
+  margin-bottom: 30px !important;
+  background-color: #f4f4f4 !important;
+  -webkit-border-radius: 1px !important;
+     -moz-border-radius: 1px !important;
+          border-radius: 1px !important;
+}
+
+.hero-unit p {
+  font-size: 14px !important;
+  line-height: 22px !important;
+}
+
+.avatar{
+    border:1px solid #eee;
+    padding:5px;
+    margin:auto auto;
+    width:250px;
+    height:290px;
+}
+
+.avatar img{
+    display:block;
+    margin:auto auto;
+    width:100%;
+    height:100%;
+}
+
+.bio{
+    width:250px;
+    margin:auto auto;
+    text-align:center;
+}
+
+.contact{
+    width:250px;
+    margin:10px auto;
+    text-align:right;
+}
+
+.button{
+    width:250px;
+    margin:20px auto 0 auto;
+    text-align:center;
+}
+
+.btn-download{
+    padding: 8px 10px;
+}
+
+.no-radius{
+    border-radius:0 !important;
+    -moz-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+
+.header{
+    clear:both;
+}
+
