@@ -46,9 +46,16 @@ b {
   font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h4 {
- font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
- color: #007FC0;
+
+
+.section {
+  i {
+    vertical-align: middle;
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 24px;
+  }
 }
 
 input {
@@ -56,18 +63,16 @@ input {
 }
 
 .header {
-    position: relative;
-    background: url('../images/header.png') no-repeat top left;
-    height: 170px;
 
-    .dius {
-        position: absolute;
-        right: 80px;
-        top: 40px;
-        width: 135px;
-        height: 68px;
-        background: url('../images/dius.png') no-repeat top left;
-    }
+    height: 70px;
+    background-color: #0094cf;
+
+  a {
+    padding: 25px 10px 10px;
+    font-size: 26px;
+    font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+  }
 
 }
 

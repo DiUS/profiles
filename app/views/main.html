@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="span12 header">
-      <div class="dius"></div>
+      <a class="pull-right" href="http://dius.com.au">dius.com.au</a>
     </div>
   </div>
   <div class="row">
@@ -20,9 +20,9 @@
 
         <div class="contact">
           <p><a href="http://twitter.com/charlesblaxland">@charlesblaxland</a><i class="icon fa fa-twitter"></i></p>
-          <p><a href="http://au.linkedin.com/in/charlesblaxland">au.linkedin.com/in/charlesblaxland</a><i class="icon fa fa-linkedin"></i>
-          <p><a href="https://github.com/ampedanwired">ampedandwired</a><i class="icon fa fa-github-alt"></i>
-          <p>cblaxland@dius.com <i class="icon-envelope"></i></p>
+          <p><a href="http://au.linkedin.com/in/charlesblaxland">au.linkedin.com/in/charlesblaxland</a><i class="icon fa fa-linkedin"></i></p>
+          <p><a href="https://github.com/ampedanwired">ampedandwired</a><i class="icon fa fa-github-alt"></i></p>
+          <p><a href="mailto:cblaxland@dius.com">cblaxland@dius.com.au</a><i class="icon icon-envelope"></i></p>
         </ul>
       </div>
       <br class="clearfix" />
@@ -35,7 +35,6 @@
   </div>
   <div class="span8">
     <div class="hero-unit">
-
       <p>
       Charles is a software engineering superstar with an excellent track record of delivering highly scalable and transactional software applications in a wide range of industries, including e-commerce, travel and medical. He has led globally distributed teams of over 60 using Agile and Lean practices.
       </p><p>
@@ -44,18 +43,55 @@
     </div>
 
     <div class="section">
-      <h3>Selected Experience.</h3>
+      <h3>
+        <i class="fa fa-wrench"></i>
+        Core expertise
+      </h3>
       <hr />
+      <div>
+        <span ng-repeat="label in attrs.labels" class="label label-info"><span edit-in-place="label.skill"></span></span>
+        <span ng-switch="attrs.addingSkill">
+          <a ng-switch-when="false" ng-click="addSkill()">Add</a>
+          <span ng-switch-when="true" class="label">
+            <textarea class="skill-inline" ng-model="newSkill" ng-enter="addNewSkill(newSkill)"></textarea>
+          </span>
+        </span>
+      </div>
+
     </div>
 
-    <div class="row-fluid">
-      <div class="span6">
-        <h4><i class="icon-plus"></i>ResMed</h4>
-        <p>Led the ResMed Easycare Online system architecture and provided technical development leadership for the highly successful product. Also accountable for the work done across multiple teams consisting of a total of more than 60 people which consisted of DiUS, ResMed and other third party vendors.</p>
+    <div class="section">
+      <h3>
+        <i class="fa fa-suitcase"></i>
+        Selected experience
+      </h3>
+      <hr />
+      <div class="row-fluid">
+        <div class="span6">
+          <h4><i class="icon-plus"></i>ResMed</h4>
+          <p>Led the ResMed Easycare Online system architecture and provided technical development leadership for the highly successful product. Also accountable for the work done across multiple teams consisting of a total of more than 60 people which consisted of DiUS, ResMed and other third party vendors.</p>
+        </div>
+        <div class="span6">
+          <h4><i class="icon-plus"></i>Westfield</h4>
+          <p>Part of the DiUS team that was awarded the global ResMed Most Valuable Supplier Innovation Award.</p>
+        </div>
       </div>
-      <div class="span6">
-        <h4><i class="icon-plus"></i>Westfield</h4>
-        <p>Part of the DiUS team that was awarded the global ResMed Most Valuable Supplier Innovation Award.</p>
+    </div>
+    <div class="section">
+      <h3>
+        <i class="fa fa-heart"></i>
+        Passionate about
+      </h3>
+      <hr />
+      <div class="row-fluid">
+        <p>
+          Dan North's work on Behavioural Driven Development, AWS Elastic Beanstalk, Ansible and Continuous Deployment.
+        </p>
+        <p>
+          Big Data. Charles is the leader of DiUS Big Data Special Interest Group, looking at
+          how NoSQL, data analytics and machine learning can help improve insights and solve business
+          problems.
+        </p>
       </div>
     </div>
   </div>
