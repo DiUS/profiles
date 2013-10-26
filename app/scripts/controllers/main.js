@@ -20,9 +20,9 @@ angular.module('profilesApp')
       {text: 'Part of the DiUS team that was awarded the global ResMed Most Valuable Supplier Innovation Award.'}
     ];
     $scope.attrs.experiences = [
-      {text: 'Sensis'},
-      {text: 'Real Estate Australia'},
-      {text: 'Westfield'}
+      {title: 'DiUS @ ResMed', description: 'Led the ResMed Easycare Online system architecture and provided technical development leadership for the highly successful product. Also accountable for the work done across multiple teams consisting of a total of more than 60 people which consisted of DiUS, ResMed and other third party vendors.'},
+      {title: 'DiUS @ Westfield',  description: 'blah, blah'},
+      {title: 'Sabre Airline Solutions', description: 'Championed introduction of agile development practices and process into Sabre Airline Solutions.'}
     ];
 
     $scope.addExperience = function() {

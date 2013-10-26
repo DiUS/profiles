@@ -66,15 +66,9 @@
         Selected experience
       </h3>
       <hr />
-      <div class="row-fluid">
-        <div class="span6">
-          <h4><i class="icon-plus"></i>ResMed</h4>
-          <p>Led the ResMed Easycare Online system architecture and provided technical development leadership for the highly successful product. Also accountable for the work done across multiple teams consisting of a total of more than 60 people which consisted of DiUS, ResMed and other third party vendors.</p>
-        </div>
-        <div class="span6">
-          <h4><i class="icon-plus"></i>Westfield</h4>
-          <p>Part of the DiUS team that was awarded the global ResMed Most Valuable Supplier Innovation Award.</p>
-        </div>
+      <div ng-repeat="experience in attrs.experiences">
+        <h4><i class="icon-plus"></i><span edit-in-place="experience.title"></span></h4>
+        <p><span edit-in-place="experience.description"></span></p>
       </div>
     </div>
     <div class="section">
