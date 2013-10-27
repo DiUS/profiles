@@ -170,21 +170,19 @@ li.spaced {
     height: 100px;
 }
 
-.skill-inline {
-  color: white;
+.label input {
+  font-size: 13.5px;
   font-family: "Museo300-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: transparent;
-  border: 0;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  height: 19px;
-  padding-bottom: 0;
-  width: 80px;
-  resize: none;
-  margin-top: -4px;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   font-weight: bold;
+  color: white;
+  width: auto;
+}
+
+.edit-in-place input, .edit-in-place textarea {
+  background: transparent;
+  margin: -3px 0;
+  padding: 0;
+  border: 0;
 }
 
 .well {
@@ -200,9 +198,9 @@ li.spaced {
 }
 
 .hero-unit {
-  padding: 30px !important;
-  margin-bottom: 30px !important;
-  margin-top: 12px !important;
+  padding: 25px 30px 15px !important;
+  margin-bottom: 17px !important;
+  margin-top: 23px !important;
   background-color: #f4f4f4 !important;
   -webkit-border-radius: 1px !important;
      -moz-border-radius: 1px !important;
@@ -264,3 +262,7 @@ li.spaced {
     clear:both;
 }
 
+.label {
+  border-radius: 0;
+  padding: 7px;
+}

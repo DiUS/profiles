@@ -1,8 +1,9 @@
 angular.module('profilesApp').directive( 'editInPlace', function($timeout) {
   return {
     restrict: 'A',
+    transclude: true,
     scope: { value:"=editInPlace" },
-    template: '<span ng-click="edit()" ng-bind="value" ng-hide="editing"></span><input ng-show="editing" ng-model="value" ng-blur="editing = false" ng-enter="editing = false"></input>',
+    template: '<span ng-click="edit()" ng-bind="value" ng-hide="editing"></span><input ng-show="editing" ng-model="value" ng-blur="editing = false" ng-enter="editing = false"></input><span ng-transclude />',
     link: function ( $scope, element, attrs ) {
       // Let's get a reference to the input element, as we'll want to reference it.
       var inputElement = angular.element( element.children()[1] );
@@ -41,8 +42,9 @@ angular.module('profilesApp').directive( 'editInPlace', function($timeout) {
 angular.module('profilesApp').directive( 'editInPlaceTextarea', function($timeout) {
   return {
     restrict: 'A',
+    transclude: true,
     scope: { value:"=editInPlaceTextarea" },
-    template: '<span ng-click="edit()" ng-bind="value" ng-hide="editing"></span><textarea ng-show="editing" ng-model="value" ng-blur="editing = false" ng-enter="editing = false"></textarea>',
+    template: '<span ng-click="edit()" ng-bind="value" ng-hide="editing"></span><textarea ng-show="editing" ng-model="value" ng-blur="editing = false" ng-enter="editing = false"></textarea><span ng-transclude />',
     link: function ( $scope, element, attrs ) {
       // Let's get a reference to the input element, as we'll want to reference it.
       var inputElement = angular.element( element.children()[1] );
@@ -76,4 +78,4 @@ angular.module('profilesApp').directive( 'editInPlaceTextarea', function($timeou
       });
     }
   };
-});
+}); 
