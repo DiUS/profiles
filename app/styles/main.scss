@@ -19,6 +19,7 @@ $baseFontSize: 16px;
 }
 
 @import "bootstrap-sass/lib/bootstrap";
+@import "bootstrap-sass/lib/responsive";
 
 $FontAwesomePath: "/bower_components/font-awesome/font";
 @import "font-awesome/scss/font-awesome";
