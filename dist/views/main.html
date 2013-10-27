@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="row">
+    <div class="span12 header">
+      <a class="pull-right" href="http://dius.com.au">dius.com.au</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <div class="well">
+        <div class="avatar">
+          <img src="images/charles_blaxland.jpg">
+        </div>
+        <br class="clearfix">
+
+        <div class="bio">
+          <h2 edit-in-place="attrs.name"></h2>
+          <p edit-in-place="attrs.title"></p>
+        </div>
+        <br class="clearfix">
+
+        <div class="contact">
+          <p><a href="http://twitter.com/charlesblaxland">@charlesblaxland</a><i class="icon fa fa-twitter"></i></p>
+          <p><a href="http://au.linkedin.com/in/charlesblaxland">au.linkedin.com/in/charlesblaxland</a><i class="icon fa fa-linkedin"></i></p>
+          <p><a href="https://github.com/ampedanwired">github.com/ampedandwired</a><i class="icon fa fa-github-alt"></i></p>
+          <p><a href="mailto:cblaxland@dius.com">cblaxland@dius.com.au</a><i class="icon icon-envelope"></i></p>
+        
+      </div>
+      <br class="clearfix">
+
+      <div class="button no-display">
+        <p><a class="btn no-radius btn-download no-display" href="#" id="print"><i class="icon-print"></i> Print</a>
+        <a class="btn no-radius btn-download no-display" href="#"><i class="icon-download-alt"></i> Download</a>
+      </p></div>
+    </div>
+  </div>
+  <div class="span8">
+    <div class="hero-unit">
+      <p>
+      Charles is a software engineering superstar with an excellent track record of delivering highly scalable and transactional software applications in a wide range of industries, including e-commerce, travel and medical. He has led globally distributed teams of over 60 using Agile and Lean practices.
+      </p><p>
+      Currently Charles is the DiUS Sydney resident DevOps guru who is innovating and breaking ground in the way we approach provisioning and deploying environments from development to production. Outside of work, he can be found scaling and climbing mountains with the same passion and enthusiasm as his professional endeavours.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>
+        <i class="fa fa-wrench"></i>
+        Core expertise
+      </h3>
+      <hr>
+      <div>
+        <span ng-repeat="label in attrs.labels" class="label label-info"><span edit-in-place="label.skill"></span></span>
+        <span ng-switch="attrs.addingSkill">
+          <a ng-switch-when="false" ng-click="addSkill()">Add</a>
+          <span ng-switch-when="true" class="label">
+            <textarea class="skill-inline" ng-model="newSkill" ng-enter="addNewSkill(newSkill)"></textarea>
+          </span>
+        </span>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h3>
+        <i class="fa fa-suitcase"></i>
+        Selected experience
+      </h3>
+      <hr>
+      <div ng-repeat="experience in attrs.experiences">
+        <h4><i class="icon-plus"></i><span edit-in-place="experience.title"></span></h4>
+        <p><span edit-in-place="experience.description"></span></p>
+      </div>
+      <span ng-switch="attrs.addingExperience">
+        <a ng-switch-when="false" ng-click="addExperience()">Add Experience</a>
+        <textarea ng-switch-when="true" ng-model="newExperience" ng-enter="addNewExperience(newExperience)"></textarea>
+      </span>
+    </div>
+    <div class="section">
+      <h3>
+        <i class="fa fa-heart"></i>
+        Passionate about
+      </h3>
+      <hr>
+      <div class="row-fluid">
+        <p>
+          Dan North's work on Behavioural Driven Development, AWS Elastic Beanstalk, Ansible and Continuous Deployment.
+        </p>
+        <p>
+          Big Data. Charles is the leader of DiUS Big Data Special Interest Group, looking at
+          how NoSQL, data analytics and machine learning can help improve insights and solve business
+          problems.
+        </p>
+      </div>
+    </div>
+  </div>
+</div></div>

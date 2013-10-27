@@ -20,6 +20,9 @@ $baseFontSize: 16px;
 
 @import "bootstrap-sass/lib/bootstrap";
 
+$FontAwesomePath: "/bower_components/font-awesome/font";
+@import "font-awesome/scss/font-awesome";
+
 /* Put your CSS here */
 html, body {
   margin: 20px;
