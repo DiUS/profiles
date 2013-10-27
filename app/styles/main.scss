@@ -5,17 +5,17 @@ $baseFontSize: 16px;
 
 @font-face {
     font-family: Museo300-Regular;
-    src: url("Museo300-Regular.otf") format("opentype");
+    src: url("fonts/Museo300-Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: Museo500-Regular;
-    src: url("Museo500-Regular.otf") format("opentype");
+    src: url("fonts/Museo500-Regular.otf") format("opentype");
 }
 
 @font-face {
     font-family: Museo700-Regular;
-    src: url("Museo700-Regular.otf") format("opentype");
+    src: url("fonts/Museo700-Regular.otf") format("opentype");
 }
 
 @import "bootstrap-sass/lib/bootstrap";
@@ -219,11 +219,13 @@ li.spaced {
     height:290px;
 }
 
-.avatar img{
+.avatar .img{
     display:block;
     margin:auto auto;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
+    background: url('../images/charles_blaxland.jpg') no-repeat;
+    background-size: 100%;
 }
 
 .bio{
