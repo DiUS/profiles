@@ -24,8 +24,13 @@ $FontAwesomePath: "/bower_components/font-awesome/font";
 @import "font-awesome/scss/font-awesome";
 
 /* Put your CSS here */
-html, body {
+html {
   margin: 20px;
+}
+
+.container {
+  max-width: 960px;
+  padding: 20px;
 }
 
 body {
@@ -40,8 +45,6 @@ body {
 }
 
 .outer-container {
-    width: 980px;
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 
@@ -216,8 +219,21 @@ li.spaced {
     border:1px solid #eee;
     padding:5px;
     margin:auto auto;
-    width:250px;
+    width:auto;
     height:290px;
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+  .avatar{
+    height:190px;
+  }
+}
+
+@media (max-width: 767px) {
+  .avatar{
+    width:228px;
+    height:274px;
+  }  
 }
 
 .avatar .img{
@@ -230,19 +246,16 @@ li.spaced {
 }
 
 .bio{
-    width:250px;
     margin:auto auto;
     text-align:center;
 }
 
 .contact{
-    width:250px;
     margin:10px auto;
     text-align:right;
 }
 
 .button{
-    width:250px;
     margin:20px auto 0 auto;
     text-align:center;
 }
