@@ -46,15 +46,23 @@ b {
   font-family: "Museo700-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
 
 
 .section {
+  h3 {
+    color: #0094cf;
+  }
+
   i {
     vertical-align: middle;
     font-size: 18px;
-  }
-  h3 {
-    font-size: 24px;
   }
 }
 
@@ -191,6 +199,7 @@ li.spaced {
 .hero-unit {
   padding: 30px !important;
   margin-bottom: 30px !important;
+  margin-top: 12px !important;
   background-color: #f4f4f4 !important;
   -webkit-border-radius: 1px !important;
      -moz-border-radius: 1px !important;

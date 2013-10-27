@@ -21,7 +21,7 @@
         <div class="contact">
           <p><a href="http://twitter.com/charlesblaxland">@charlesblaxland</a><i class="icon fa fa-twitter"></i></p>
           <p><a href="http://au.linkedin.com/in/charlesblaxland">au.linkedin.com/in/charlesblaxland</a><i class="icon fa fa-linkedin"></i></p>
-          <p><a href="https://github.com/ampedanwired">ampedandwired</a><i class="icon fa fa-github-alt"></i></p>
+          <p><a href="https://github.com/ampedanwired">github.com/ampedandwired</a><i class="icon fa fa-github-alt"></i></p>
           <p><a href="mailto:cblaxland@dius.com">cblaxland@dius.com.au</a><i class="icon icon-envelope"></i></p>
         </ul>
       </div>
@@ -70,6 +70,10 @@
         <h4><i class="icon-plus"></i><span edit-in-place="experience.title"></span></h4>
         <p><span edit-in-place="experience.description"></span></p>
       </div>
+      <span ng-switch="attrs.addingExperience">
+        <a ng-switch-when="false" ng-click="addExperience()">Add Experience</a>
+        <textarea ng-switch-when="true" ng-model="newExperience" ng-enter="addNewExperience(newExperience)"></textarea>
+      </span>
     </div>
     <div class="section">
       <h3>
