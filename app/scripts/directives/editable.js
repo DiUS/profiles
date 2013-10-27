@@ -1,4 +1,4 @@
-angular.module('profilesApp').directive( 'editInPlace', function() {
+angular.module('profilesApp').directive( 'editInPlace', function($timeout) {
   return {
     restrict: 'A',
     scope: { value:"=editInPlace" },
@@ -23,7 +23,10 @@ angular.module('profilesApp').directive( 'editInPlace', function() {
         // And we must focus the element.
         // `angular.element()` provides a chainable array, like jQuery so to access a native DOM function,
         // we have to reference the first element in the array.
-        inputElement[0].focus();
+        $timeout(function () {
+          inputElement[0].focus();
+          inputElement[0].select();
+        }, 100);
       };
 
       // When we leave the input, we're done editing.
@@ -35,7 +38,7 @@ angular.module('profilesApp').directive( 'editInPlace', function() {
   };
 });
 
-angular.module('profilesApp').directive( 'editInPlaceTextarea', function() {
+angular.module('profilesApp').directive( 'editInPlaceTextarea', function($timeout) {
   return {
     restrict: 'A',
     scope: { value:"=editInPlaceTextarea" },
@@ -60,7 +63,10 @@ angular.module('profilesApp').directive( 'editInPlaceTextarea', function() {
         // And we must focus the element.
         // `angular.element()` provides a chainable array, like jQuery so to access a native DOM function,
         // we have to reference the first element in the array.
-        inputElement[0].focus();
+        $timeout(function () {
+          inputElement[0].focus(); 
+          inputElement[0].select();
+        }, 100);
       };
 
       // When we leave the input, we're done editing.

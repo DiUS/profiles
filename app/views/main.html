@@ -68,7 +68,7 @@
       <hr />
       <div ng-repeat="experience in attrs.experiences">
         <h4><i class="icon-plus"></i><span edit-in-place="experience.title"></span></h4>
-        <p><span edit-in-place="experience.description"></span></p>
+        <p><span edit-in-place-textarea="experience.description"></span></p>
       </div>
       <span ng-switch="attrs.addingExperience">
         <a ng-switch-when="false" ng-click="addExperience()">Add Experience</a>
