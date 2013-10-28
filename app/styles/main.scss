@@ -29,6 +29,20 @@ html {
   margin: 20px;
 }
 
+@media (max-width: 767px) {
+  html{
+    margin: 0;
+  }
+
+  body {
+    padding: 0;
+  }  
+
+  .container {
+    padding: 0;
+  }
+}
+
 .container {
   max-width: 960px;
   padding: 20px;
