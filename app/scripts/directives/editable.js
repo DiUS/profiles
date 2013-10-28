@@ -44,7 +44,7 @@ angular.module('profilesApp').directive( 'editInPlaceTextarea', function($timeou
     restrict: 'A',
     transclude: true,
     scope: { value:"=editInPlaceTextarea" },
-    template: '<span ng-click="edit()" ng-bind="value" ng-hide="editing"></span><textarea ng-show="editing" ng-model="value" ng-blur="editing = false" ng-enter="editing = false"></textarea><span ng-transclude />',
+    template: '<span ng-click="edit()" ng-bind-html="value" ng-hide="editing"></span><textarea ng-show="editing" ng-model="value"></textarea><span ng-transclude />',
     link: function ( $scope, element, attrs ) {
       // Let's get a reference to the input element, as we'll want to reference it.
       var inputElement = angular.element( element.children()[1] );
@@ -59,6 +59,9 @@ angular.module('profilesApp').directive( 'editInPlaceTextarea', function($timeou
       $scope.edit = function () {
         $scope.editing = true;
 
+        // replace <br>'s with line breaks
+        $scope.value = $scope.value.replace(/<br\/>/g, '\n');
+
         // We control display through a class on the directive itself. See the CSS.
         element.addClass( 'active' );
 
@@ -72,9 +75,14 @@ angular.module('profilesApp').directive( 'editInPlaceTextarea', function($timeou
       };
 
       // When we leave the input, we're done editing.
-      inputElement.prop( 'onblur', function() {
-        $scope.editing = false;
-        element.removeClass( 'active' );
+      inputElement.on('blur', function() {
+        $scope.$apply(function () {
+          // replace <br>'s with line breaks
+          $scope.value = $scope.value.replace(/\n/g, '<br/>');
+
+          $scope.editing = false;
+          element.removeClass( 'active' );
+        });
       });
     }
   };
