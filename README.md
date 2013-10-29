@@ -15,7 +15,7 @@ The primary goal of __Profiles__ is to make the Consultant Summary **ACCESSIBLE*
   * Accessible to account managers.
 
 __Profiles__ should also demonstrate our ability to create nice things. We give these things
-to our clients and prospective client so we want them to:
+to our clients and prospective clients so we want them to:
 
   * Use the web technologies we work with everyday.
   * Use a responsive design.
@@ -31,7 +31,7 @@ design and modified it for the Web.
   * Clients don't believe what is written in them.
   * Clients would be happy to endore experience/skills for consultants.
   * __Profiles__ need to be secure with restriced access.
-  * Encourage people to participant in activities that develop their own public profile.
+  * __Profiles__ should encourage people to participant in activities that develop their own public profile.
 
 Thanks to everyone who contributed to __Profiles__
 
