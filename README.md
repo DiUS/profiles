@@ -31,6 +31,7 @@ design and modified it for the Web.
   * Clients don't believe what is written in them.
   * Clients would be happy to endore experience/skills for consultants.
   * __Profiles__ need to be secure with restriced access.
+  * Encourage people to participant in activities that develop their own public profile.
 
 Thanks to everyone who contributed to __Profiles__
 
