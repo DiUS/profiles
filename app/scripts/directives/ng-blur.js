@@ -22,3 +22,29 @@ angular.module('profilesApp').directive('ngEnter', function () {
         });
     };
 });
+
+angular.module('profilesApp').directive('autoGrow', function() {
+  return function(scope, element, attr){
+    var $shadow = angular.element('<div></div>').css({
+      position: 'absolute',
+      top: -10000,
+      left: -10000,
+      resize:     'none'
+    });
+    angular.element(document.body).append($shadow);
+ 
+    var update = function() {
+      $shadow.css({
+        fontSize:   element.css('fontSize'),
+        fontFamily: element.css('fontFamily'),
+        fontWeight: element.css('fontWeight'),
+        lineHeight: element.css('lineHeight')
+      })
+      $shadow.html(element.val());
+      element.css('width',  ($shadow.width() + 15) + 'px');
+    }
+ 
+    element.bind('keyup keydown keypress change focus', update);
+    update();
+  }
+});

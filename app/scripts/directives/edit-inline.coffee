@@ -42,4 +42,4 @@ angular.module('profilesApp').directive 'editInline', ($timeout) ->
         textarea[0].select()
       , 50
   template: '<span ng-bind-html="valueAsHtml" ng-hide="editing" ng-click="edit()" />
-             <textarea ng-model="value" ng-show="editing" ng-blur="editing = false" ng-enter="editing = false" />'
+             <textarea auto-grow ng-model="value" ng-show="editing" ng-blur="editing = false" ng-enter="editing = false" />'
