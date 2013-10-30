@@ -3,11 +3,11 @@ angular.module('profilesApp').directive 'editInline', ($timeout) ->
   scope: 
     value: '=editInline'
   link: ($scope, element, attrs) ->
-    # Get the input element
-    input = angular.element element.children()[1]
+    # Get the textarea element
+    textarea = angular.element element.children()[1]
 
     # Default styles
-    input.css
+    textarea.css
       background: 'transparent'
       margin:     '0'
       padding:    '0'
@@ -19,7 +19,7 @@ angular.module('profilesApp').directive 'editInline', ($timeout) ->
     # in edit mode
     $scope.edit = ->
       # Inherit styles from element
-      input.css
+      textarea.css
         fontSize:   element.css('fontSize')
         fontFamily: element.css('fontFamily')
         fontWeight: element.css('fontWeight')
@@ -34,8 +34,8 @@ angular.module('profilesApp').directive 'editInline', ($timeout) ->
 
       # focus and select
       $timeout ->
-        input[0].focus()
-        input[0].select()
+        textarea[0].focus()
+        textarea[0].select()
       , 50
-  template: '<span  ng-bind="value"  ng-hide="editing" ng-click="edit()" />
+  template: '<span     ng-bind="value"  ng-hide="editing" ng-click="edit()" />
              <textarea ng-model="value" ng-show="editing" ng-blur="editing = false" ng-enter="editing = false" />'
