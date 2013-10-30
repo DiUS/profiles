@@ -5,7 +5,7 @@ angular.module('profilesApp')
     $scope.attrs = {};
     $scope.attrs.title = 'Senior Consultant, Cloud Lead';
     $scope.attrs.name = 'Charles Blaxland';
-    $scope.attrs.summary = "Charles is a software engineering superstar with an excellent track record of delivering highly scalable and transactional software applications in a wide range of industries, including e-commerce, travel and medical. He has led globally distributed teams of over 60 using Agile and Lean practices.<br/><br/>Currently Charles is the DiUS Sydney resident DevOps guru who is innovating and breaking ground in the way we approach provisioning and deploying environments from development to production. Outside of work, he can be found scaling and climbing mountains with the same passion and enthusiasm as his professional endeavours."
+    $scope.attrs.summary = "Charles is a software engineering superstar with an excellent track record of delivering highly scalable and transactional software applications in a wide range of industries, including e-commerce, travel and medical. He has led globally distributed teams of over 60 using Agile and Lean practices.\n\nCurrently Charles is the DiUS Sydney resident DevOps guru who is innovating and breaking ground in the way we approach provisioning and deploying environments from development to production. Outside of work, he can be found scaling and climbing mountains with the same passion and enthusiasm as his professional endeavours."
 
     $scope.attrs.labels = [
       {skill: 'Java'},

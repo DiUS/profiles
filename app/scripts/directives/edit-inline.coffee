@@ -6,6 +6,10 @@ angular.module('profilesApp').directive 'editInline', ($timeout) ->
     # Get the textarea element
     textarea = angular.element element.children()[1]
 
+    # Replace line breaks with <br/>
+    $scope.$watch 'value', ->
+      $scope.valueAsHtml = $scope.value.replace /\n/g, '<br/>'
+
     # Default styles
     textarea.css
       background: 'transparent'
@@ -37,5 +41,5 @@ angular.module('profilesApp').directive 'editInline', ($timeout) ->
         textarea[0].focus()
         textarea[0].select()
       , 50
-  template: '<span     ng-bind="value"  ng-hide="editing" ng-click="edit()" />
+  template: '<span ng-bind-html="valueAsHtml" ng-hide="editing" ng-click="edit()" />
              <textarea ng-model="value" ng-show="editing" ng-blur="editing = false" ng-enter="editing = false" />'
