@@ -1,3 +1,5 @@
+'use strict'
+
 angular.module('profilesApp').directive 'editInline', ($compile, $timeout) ->
   restrict:   'A'
   scope: 
