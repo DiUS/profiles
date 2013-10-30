@@ -1,7 +1,7 @@
-angular.module('profilesApp').directive 'editInPlace', ($timeout) ->
+angular.module('profilesApp').directive 'editInline', ($timeout) ->
   restrict:   'A'
   scope: 
-    value: '=editInPlace'
+    value: '=editInline'
   link: ($scope, element, attrs) ->
     # Get the input element
     input = angular.element element.children()[1]
