@@ -45,8 +45,12 @@
       </h3>
       <hr />
       <div>
-        <span ng-repeat="label in attrs.labels" class="label label-info" edit-inline="label.skill" increase-width>
-        </span>
+        <span 
+          class="label label-info"
+          ng-repeat="label in attrs.labels"
+          edit-inline="label.skill"
+          edit-complete="cleanupLabels()"
+          edit-increase-width />
         <span ng-switch="attrs.addingSkill">
           <a ng-switch-when="false" ng-click="addSkill()">Add</a>
           <span ng-switch-when="true" class="label">

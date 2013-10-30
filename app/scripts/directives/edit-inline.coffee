@@ -1,15 +1,18 @@
 'use strict'
 
-angular.module('profilesApp').directive 'editInline', ($compile, $timeout) ->
+angular.module('profilesApp').directive 'editInline', ($compile, $parse, $timeout) ->
   restrict:   'A'
   scope: 
-    editInline:    '='
+    editInline: '='
   link: ($scope, element, attrs) ->
+    # Initially, we're not editing.
+    $scope.editing = false
+
     # Get the textarea element
     textarea = angular.element element.children()[1]
 
     # Auto increase the width?
-    if attrs.increaseWidth != undefined
+    if attrs.editIncreaseWidth != undefined
       textarea.attr 'auto-grow', ''
       $compile(textarea)($scope)
 
@@ -17,6 +20,12 @@ angular.module('profilesApp').directive 'editInline', ($compile, $timeout) ->
     if attrs.allowEnter == undefined
       textarea.attr 'ng-enter', 'editing = false'
       $compile(textarea)($scope)
+
+    # Handle edit complete?
+    if attrs.editComplete != undefined
+      $scope.$watch 'editing', ->
+        if $scope.editing == false
+          $scope.$eval -> $parse(attrs.editComplete)($scope.$parent)
 
     # Replace line breaks with <br/>
     $scope.$watch 'editInline', ->
@@ -28,9 +37,6 @@ angular.module('profilesApp').directive 'editInline', ($compile, $timeout) ->
       margin:     '0'
       padding:    '0'
       border:     '0'
-
-    # Initially, we're not editing.
-    $scope.editing = false
 
     # in edit mode
     $scope.edit = ->

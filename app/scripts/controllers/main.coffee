@@ -26,6 +26,9 @@ angular.module('profilesApp').controller 'MainCtrl', ($scope) ->
         {title: 'Sabre Airline Solutions', description: 'Championed introduction of agile development practices and process into Sabre Airline Solutions.'}
       ]
 
+    $scope.cleanupLabels = ->
+      $scope.attrs.labels = $scope.attrs.labels.filter (label) -> label.skill != ''
+
     $scope.addExperience = ->
       $scope.attrs.addingExperience = true;
 
