@@ -35,7 +35,7 @@
   </div>
   <div class="span8">
     <div class="hero-unit">
-      <p edit-in-place-textarea="attrs.summary"></p>
+      <p edit-inline="attrs.summary"></p>
     </div>
 
     <div class="section">
@@ -47,7 +47,7 @@
       <div>
         <span ng-repeat="label in attrs.labels" class="label label-info" edit-inline="label.skill">
         </span>
-        <span ng-switch="attrs.addingSkill" class="edit-in-place">
+        <span ng-switch="attrs.addingSkill">
           <a ng-switch-when="false" ng-click="addSkill()">Add</a>
           <span ng-switch-when="true" class="label">
             <input ng-model="newSkill" ng-enter="addNewSkill(newSkill)"></input>
@@ -65,7 +65,7 @@
       <hr />
       <div ng-repeat="experience in attrs.experiences">
         <h4><i class="icon-plus"></i><span edit-inline="experience.title"></span></h4>
-        <p><span edit-in-place-textarea="experience.description"></span></p>
+        <p><span edit-inline="experience.description"></span></p>
       </div>
       <span ng-switch="attrs.addingExperience">
         <a ng-switch-when="false" ng-click="addExperience()">Add Experience</a>
